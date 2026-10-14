@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="1014s06 Personal Tool 的隐私政策，说明个人使用范围、Google 数据访问、本机凭据保存、第三方服务和授权撤销。">
+  <title>隐私政策 · 1014s06 Personal Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="draft-banner">个人自用 · 本机数据处理 · 公开隐私说明</div>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">06</span><span>1014s06 <small>Personal Tool</small></span></a>
+    <nav aria-label="主导航"><a href="index.html">工具说明</a><a href="privacy.html" aria-current="page">隐私政策</a></nav>
+  </header>
+  <main id="main" class="wrap policy-layout">
+    <aside class="policy-toc" aria-label="隐私政策目录"><p class="eyebrow">阅读目录</p><a href="#purpose">使用范围</a><a href="#data">访问的数据</a><a href="#storage">保存与保护</a><a href="#sharing">网络通信与第三方</a><a href="#control">保留、删除与撤销</a><a href="#contact">联系与更新</a></aside>
+    <article class="policy-body">
+      <header class="policy-heading"><p class="eyebrow">PRIVACY / PERSONAL USE</p><h1>隐私政策</h1><p class="lead">1014s06 Personal Tool</p><p class="muted">生效日期：2026 年 10 月 14 日。本文说明本工具在个人自用、本机处理方式下的数据访问、保存与管理规则。</p></header>
+      <section id="purpose"><h2>1. 使用范围与目的</h2><p>本工具仅供维护者本人在自己的电脑上使用，通过 Google OAuth 获取本人同意的权限，并运行访问本人 Google 数据的 API 脚本。工具不向公众提供账号注册、账号托管或远程代操作服务。</p><p>本网站只是工具说明与隐私信息展示页，不提供 Google 登录按钮，不接收 OAuth 回调，不收集账号密码，也不要求访问者输入验证码、令牌或 API Key。</p></section>
+      <section id="data"><h2>2. 可能访问的数据</h2><p>目前授权配置涉及 Gmail、Google Drive、Google Calendar、YouTube、Google Docs、Google Sheets 和 Google Forms。相应权限可能允许读取或管理邮件、文件、日历日程、YouTube 账号数据、文档、电子表格及表单；部分权限包含修改或删除能力。</p><p>具体访问取决于本人批准的 OAuth 权限、实际运行的本机脚本，以及相关 Google API 的限制。授权范围较广并不表示每次运行都会读取全部数据；维护者应按实际功能缩小权限，并仅执行本人需要的操作。</p><p>工具还会处理用于授权的 OAuth 客户端信息、访问令牌和刷新令牌。这些内容属于敏感凭据，不应提交到公开网页、代码仓库、工单或聊天消息。</p></section>
+      <section id="storage"><h2>3. 本机保存与保护</h2><p>当前授权脚本会把 OAuth 凭据保存为本机 JSON 文件。该文件不是网页内容，不包含在本网站或其公开 GitHub 仓库中。</p><p>“保存到本机”不代表文件自动加密。维护者应限制文件访问权限，保护电脑及备份，并避免把包含凭据的目录加入公开仓库或非预期的同步服务。本文不承诺当前脚本已实现文件加密、自动脱敏或自动清理。</p><p>Google 业务数据是否保存为文件或日志，取决于本人运行的具体脚本和操作。维护者应检查这些输出的内容与保存位置，而不应假定程序没有生成副本。</p></section>
+      <section id="sharing">
+        <h2>4. 网络通信与第三方服务</h2>
+        <p>按照当前确认的使用方式，Google 数据返回后在维护者自己的电脑上处理，不交给其他云服务或 AI 工具进行处理。若以后接入第三方服务、远程执行或数据同步，需要先重新评估数据流并更新说明。</p>
+        <p>本机处理不等于完全离线：OAuth 登录、刷新令牌及 API 调用会连接 Google。请求中可能包含访问令牌、资源标识及与操作相关的内容，也可能按本人指令更新 Google 服务中的资料。Google 按其自身政策处理其在线服务中的数据，详见 <a href="https://policies.google.com/privacy">Google 隐私政策</a>。</p>
+        <p>本说明网站使用 GitHub Pages 托管。GitHub 会为安全目的记录访问者 IP 地址；公开托管的内容仅为工具介绍、隐私政策及样式文件，不包含 Google 邮件、文件内容或 OAuth 凭据。详见 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages 数据收集说明</a>。</p>
+        <p>这些静态页面不包含分析脚本、广告、表单或第三方嵌入资源，也不设置应用 Cookie。点击外部链接后，对方网站可能按其自身政策处理访问数据。</p>
+        <p>本工具的 Google API 数据使用应遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括适用的 Limited Use 要求。维护者应确保 Google 用户数据不被用于广告定向、出售或训练通用 AI 模型。</p>
+      </section>
+      <section id="control">
+        <h2>5. 保留、删除与撤销授权</h2>
+        <p>当前没有统一设定的自动删除期限。凭据及本人主动保存的业务文件由维护者按使用需要保留，并在不再需要时删除；日志、备份及可能的同步副本也应分别检查。</p>
+        <p>可以在 <a href="https://myaccount.google.com/connections">Google 账号第三方连接管理</a> 中撤销本工具的访问权限。撤销授权不等于自动删除本机已有文件，也不保证第三方备份被同步清除；删除本地副本也不等于删除 Google 账号中的原始资料。</p>
+        <p>如果怀疑凭据泄露，应停止使用相应凭据，在 Google 侧撤销或轮换有关凭据，并检查本机及曾分享的位置。不要把泄露的凭据发送给联系邮箱。</p>
+      </section>
+      <section id="contact"><h2>6. 联系与更新</h2><p>维护者联系邮箱：<a href="mailto:KarenandjimSilverman527@gmail.com">KarenandjimSilverman527@gmail.com</a>。</p><p>此邮箱由维护者指定，可用于工具和数据处理相关问题。不要在邮件中发送账号密码、一次性验证码、访问令牌、刷新令牌、API Key 或私钥。</p><p>若工具用途、权限、托管方式或数据处理方式发生变化，应更新本政策及主页。本网站不代表 Google 对应用的认证、审核批准或安全保证。</p></section>
+      <a class="text-link back-link" href="index.html">← 返回工具说明</a>
+    </article>
+  </main>
+  <footer class="site-footer wrap"><span>1014s06 Personal Tool · 独立个人工具，非 Google 官方产品</span><a href="index.html">工具说明</a><span>生效：2026-10-14</span></footer>
+</body>
+</html>
