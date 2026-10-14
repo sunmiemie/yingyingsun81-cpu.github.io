@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="1014s06 Personal Tool 是供维护者本人使用的本机 Google API 脚本工具。本页介绍其授权范围和数据处理方式。">
+  <title>1014s06 Personal Tool · 个人工具说明</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="draft-banner">个人自用 · 本机数据处理 · 独立工具说明网站</div>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">06</span><span>1014s06 <small>Personal Tool</small></span></a>
+    <nav aria-label="主导航"><a href="index.html" aria-current="page">工具说明</a><a href="privacy.html">隐私政策</a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">PERSONAL USE / LOCAL WORKFLOW</p>
+        <h1 id="hero-title">个人工具。<br><span>数据处理在本机。</span></h1>
+        <p class="lead">1014s06 Personal Tool 用于在维护者自己的电脑上完成 Google OAuth 授权，并运行访问本人 Google 数据的 API 脚本。不向公众提供注册或代管账号服务。</p>
+        <div class="actions"><a class="button" href="privacy.html">了解数据如何处理 <span aria-hidden="true">↗</span></a><a class="text-link" href="#permissions">查看授权范围 ↓</a></div>
+      </div>
+      <aside class="scope-note" aria-label="使用边界">
+        <p class="eyebrow">使用边界</p>
+        <dl>
+          <div><dt>使用者</dt><dd>仅维护者本人</dd></div>
+          <div><dt>执行位置</dt><dd>自己的电脑</dd></div>
+          <div><dt>网络通信</dt><dd>授权及 API 调用连接 Google</dd></div>
+          <div><dt>本说明页</dt><dd>静态页面，不执行登录或收集令牌</dd></div>
+        </dl>
+        <p class="small">“本机处理”不等于“完全离线”。Google 仍负责其在线服务的数据处理。</p>
+      </aside>
+    </section>
+    <section class="section flow-section" aria-labelledby="workflow-title">
+      <div class="section-heading"><p class="eyebrow">01 / 工作方式</p><h2 id="workflow-title">授权与运行都由本人控制</h2></div>
+      <ol class="workflow">
+        <li><span class="step-number">1</span><h3>在 Google 页面授权</h3><p>浏览器前往 Google 官方授权页面，由本人选择账号、查看请求的权限并决定是否同意。</p></li>
+        <li><span class="step-number">2</span><h3>在本机保存凭据</h3><p>授权脚本把 OAuth 凭据保存到本机文件，供本机脚本使用。凭据不应放入公开仓库或网页。</p></li>
+        <li><span class="step-number">3</span><h3>按需调用 Google API</h3><p>本机脚本向 Google 发起请求，并在本机处理返回数据。此静态说明页不调用 Google API。</p></li>
+      </ol>
+    </section>
+    <section id="permissions" class="section" aria-labelledby="permissions-title">
+      <div class="section-heading"><p class="eyebrow">02 / 当前权限配置</p><h2 id="permissions-title">了解授权的范围，而不只看工具名称</h2><p class="muted">当前 OAuth 配置包含下列服务的较广权限。下表描述权限可能允许的访问，不表示每次运行都会读取或修改全部数据。实际功能应只使用完成任务所需的权限。</p></div>
+      <div class="table-scroll"><table><caption class="sr-only">当前 Google OAuth 权限所涉及的服务和数据</caption><thead><tr><th scope="col">服务</th><th scope="col">权限涉及的数据与操作</th></tr></thead><tbody>
+        <tr><th scope="row">Gmail</th><td>邮件与邮箱数据，包括读取、发送、修改及删除邮件等操作。当前包含全邮箱权限。</td></tr>
+        <tr><th scope="row">Google Drive</th><td>云端硬盘文件，包括读取、创建、修改及删除本人授权可访问的文件。</td></tr>
+        <tr><th scope="row">Google Calendar</th><td>日历及日程数据，包括读取、创建、修改及删除等管理操作。</td></tr>
+        <tr><th scope="row">YouTube</th><td>本人 YouTube 账号相关数据及管理操作，具体以 Google 授权说明和调用的 API 为准。</td></tr>
+        <tr><th scope="row">Docs · Sheets · Forms</th><td>文档、电子表格和表单的读取与管理；实际可执行操作由各 API 和获准权限决定。</td></tr>
+      </tbody></table></div>
+      <p class="notice">仅启用某个 Cloud API 不等于已获准访问用户数据；OAuth 权限也不意味着工具可以绕过账号、文件或服务的访问限制。</p>
+    </section>
+    <section class="section contact-section" aria-labelledby="contact-title">
+      <div><p class="eyebrow">03 / 联系与控制</p><h2 id="contact-title">可以随时停止使用并撤销授权</h2><p>通过 Google 账号的第三方连接管理页面撤销访问权限；本机已保存的文件、日志和备份需另行检查和删除。</p><a class="text-link" href="https://myaccount.google.com/connections">管理 Google 账号连接 ↗</a></div>
+      <address><span class="contact-label">维护者联系邮箱</span><a href="mailto:KarenandjimSilverman527@gmail.com">KarenandjimSilverman527@gmail.com</a><span class="small">请勿通过邮件或 GitHub 发送密码、令牌、API Key 或私钥。</span></address>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>1014s06 Personal Tool · 独立个人工具，非 Google 官方产品</span><a href="privacy.html">隐私政策</a><span>更新：2026-10-14</span></footer>
+</body>
+</html>
